@@ -1,0 +1,33 @@
+---
+layout: post
+title: NetBeans + Maven + Lombok
+date: 2017-05-20 03:55:05.000000000 -03:00
+type: post
+published: true
+status: publish
+tags: [java]
+---
+<p>It's not so easy to use the latest versions of lombok, netbeans and maven together, I found a good solution in this 
+    <a href="https://basildoncoder.com/blog/netbeans-8-maven-lombok.html" target="_blank">blog post</a>
+    where you have more details. But I'll give a simplified explanation here and make a sample project available in github.
+</p>
+
+<p>1- Configure your pom.
+    {% gist bdmstyle/5c1f13825314ca794688c517706b5526 %}
+</p>
+
+<p>2 - At Project Properties->Actions->Activate Profiles and activate "lombok-build" to all operations you need like "build".
+    <a href="/images/posts/2017-05-20-maven-netbeans-lombok/actions.png" target="_blank">
+        <img src="/images/posts/2017-05-20-maven-netbeans-lombok/actions.png" >
+    </a>
+</p>
+
+<p>3- It works! Note that on command line mvn clean package is working normal (for non netbeans users like jenkins or eclipse users for example).
+    <a href="/images/posts/2017-05-20-maven-netbeans-lombok/itworks.png" target="_blank">
+        <img src="/images/posts/2017-05-20-maven-netbeans-lombok/itworks.png" >
+    </a>
+</p>
+
+
+<p>Here is a complete <a href="https://github.com/bdmstyle/netbeans-lombok" target="_blank">example project</a>.</p>
+
